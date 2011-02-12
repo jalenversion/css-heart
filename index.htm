@@ -1,0 +1,88 @@
+<!DOCTYPE>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>CSS HEART</title>
+<style>
+#heart {
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    line-height: 350px;
+    text-align: center;
+    font-family: Cambria, Georgia;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    text-shadow: black 2px 2px 4px;
+    cursor: pointer;
+}
+#heart span {
+    position: absolute;
+    z-index: -1;
+    top: 135px;
+    left: 150px;
+    border: 0 red solid;
+    border-width: 25px 50px 100px 50px;
+    width: 0;
+    margin: auto;
+}
+#heart:before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 10px;
+    left: 0;
+    background: red;
+    border: 0 red solid;
+    border-width: 250px 100px;
+    -webkit-border-radius: 100px 125px;
+    border-bottom: 0;
+}
+#heart:after {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 10px;
+    right: 0;
+    background: red;
+    border: 0 red solid;
+    border-width: 250px 100px;
+    -webkit-border-radius: 100px 125px;
+    border-bottom: 0;
+}
+#heart span:after {
+    content: "";
+    position: absolute;
+    left: -168px;
+    top: 68px;
+    border: 168px transparent solid;
+    border-top-color: red;
+}
+#heart:hover {
+    color: yellow;
+}
+#heart:active {
+    line-height: 354px;
+}
+#heart:hover:before,
+#heart:hover:after,
+#heart:hover span {
+    border-color: #F00000;
+}
+#heart:hover span:after {
+    border-top-color: #F00000;
+}
+</style>
+</head>
+
+<body>
+
+<div id="heart"><span></span>I'm a CSS Heart!</div>
+
+</body>
+
+</html>
